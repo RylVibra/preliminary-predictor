@@ -1,6 +1,10 @@
 import streamlit as st
+import streamlit as st
+from streamlit_qrcode_scanner import qrcode_scanner
 
-st.title("🎈 My new public app")
-st.write(
-    "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
-)
+
+st.header("QR Code Scanner")
+
+enable = st.checkbox("Enable camera")
+
+camera = st.camera_input("Show QR code")
